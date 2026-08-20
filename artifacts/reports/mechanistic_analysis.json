@@ -1,0 +1,33 @@
+{
+  "model": "EvoCompass",
+  "dataset": {
+    "held_out_families": 15,
+    "branches": 1557,
+    "generated_edits": 124560,
+    "successive_edit_pairs": 29583
+  },
+  "homolog_support": {
+    "observed_edit_rate_gain_vs_shuffled": 0.173,
+    "observed_edit_rate_gain_vs_evoflows_reproduction": 0.1188,
+    "mean_support_gain_vs_shuffled": 0.0535
+  },
+  "successive_edit_compatibility": {
+    "mean_nll_advantage": 1.2826173046,
+    "low_95": 1.1868493192,
+    "high_95": 1.3889035055,
+    "positive_families": "15/15"
+  },
+  "forward_reverse_asymmetry_at_budget_20": {
+    "reverse_minus_forward_nll": 46.3775016251,
+    "low_95": 39.3403447439,
+    "high_95": 52.4452874405,
+    "positive_families": "15/15"
+  },
+  "interpretation": "Correct correspondence favors homolog-supported edits and keeps later edits probable under the evolutionary profile.",
+  "limitations": [
+    "Historical intermediate states and event order are unobserved.",
+    "The released heads are source-persistent and do not establish direct epistasis.",
+    "The model does not claim to reconstruct the unique historical trajectory."
+  ]
+}
+

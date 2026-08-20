@@ -1,0 +1,11 @@
+{
+  "seed": 20260817,
+  "event_steps": 900,
+  "identity_steps": 800,
+  "event_learning_rate": 0.002,
+  "identity_learning_rate": 0.003,
+  "weight_decay": 0.01,
+  "hidden_dimension": 96,
+  "feature_dimension": 41
+}
+

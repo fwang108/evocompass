@@ -1,0 +1,15 @@
+{
+  "name": "EvoCompass",
+  "version": "0.1.0",
+  "released": "2026-08-19",
+  "sha256": {
+    "artifacts/checkpoints/evocompass.pt": "67e42001b0fa8277a9a0f27d097eeed63b9b9841bc846818c0e60b1f653440c0",
+    "artifacts/checkpoints/evoflows_reproduction.pt": "90ca925874ace085491611e1a2235ccc4adb4e5cd3aafcb8969346fa2bb59ea7",
+    "artifacts/reports/correspondence_specificity.json": "ae6e070ac667a633c4b827f136c1870ad9c5e53308bd4f35561d3334751e1912",
+    "artifacts/reports/evoflows_reproduction.json": "b269778816e19ef7bd96fda7415692cfd6cfa8332fb4b8b61f0631d0ebc535db",
+    "artifacts/reports/mechanistic_analysis.json": "1e90d86b512f35606690e26a8d4750cf00e3ac32e7e0b3936cdab6312ad1cecf",
+    "artifacts/reports/trajectory_results.json": "f2275cca8628437a58be618b510367b8c1846cdbc215a6dd11b33ee217945a3b",
+    "configs/evaluation.json": "49ee328d3f00e41bb619b8b1e38af2dcfc3dcf9490bc316952e01b96fab981fc",
+    "configs/train.json": "94f108a7105b74d296165d91d3aaafbf5bc7f6360aa8c3fc8269ba8595cd89c9"
+  }
+}

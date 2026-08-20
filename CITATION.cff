@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use EvoCompass, cite the software and the associated paper."
+title: "EvoCompass: Correspondence-Guided Edit Flows for Directional Protein Evolution"
+type: software
+authors:
+  - family-names: "Contributors"
+    given-names: "EvoCompass"
+version: 0.1.0
+date-released: 2026-08-19
+license: MIT
+

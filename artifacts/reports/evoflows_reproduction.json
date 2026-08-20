@@ -1,0 +1,18 @@
+{
+  "label": "EvoFlows reproduction",
+  "status": "paper-contract reproduction",
+  "official_repository_found": false,
+  "official_checkpoint_found": false,
+  "official_data_split_found": false,
+  "official_evaluation_code_found": false,
+  "implemented_contract": [
+    "substitution, insertion, and deletion operations",
+    "time-conditioned event rates",
+    "conditional residue distributions",
+    "event-driven variable-length sampling",
+    "controllable edit counts",
+    "deterministic edit-mechanics benchmark"
+  ],
+  "claim_boundary": "Results are from an independent implementation and must not be described as the authors' released model."
+}
+

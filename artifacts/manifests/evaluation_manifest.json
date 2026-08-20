@@ -1,0 +1,20 @@
+{
+  "model": "EvoCompass",
+  "seed": 20260817,
+  "train_families": 27,
+  "validation_families": 5,
+  "test_families": [
+    "PF00005", "PF00009", "PF00019", "PF00022", "PF00029",
+    "PF00049", "PF00059", "PF00060", "PF00061", "PF00063",
+    "PF00070", "PF00071", "PF00073", "PF00078", "PF00079"
+  ],
+  "test_branches": 1557,
+  "budgets": [1, 3, 5, 10, 20],
+  "bootstrap_draws": 10000,
+  "permutation_draws": 20000,
+  "inferential_unit": "protein_family",
+  "family_disjoint": true,
+  "descendant_clade_excluded": true,
+  "historical_event_order_observed": false
+}
+

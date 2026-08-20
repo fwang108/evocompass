@@ -1,0 +1,48 @@
+{
+  "model": "EvoCompass",
+  "dataset": {
+    "held_out_families": 15,
+    "branches": 1557,
+    "operation_events": 50206,
+    "family_disjoint": true,
+    "descendant_clade_excluded": true
+  },
+  "paired_benchmark_at_budget_10": {
+    "no_msa_minus_evocompass": {
+      "mean": 1.7073459166,
+      "low_95": 1.2227035425,
+      "high_95": 2.2629671601,
+      "positive_families": "15/15"
+    },
+    "shuffled_msa_minus_evocompass": {
+      "mean": 1.7616895779,
+      "low_95": 1.2727283899,
+      "high_95": 2.3232210323,
+      "positive_families": "15/15"
+    },
+    "evoflows_reproduction_minus_evocompass": {
+      "mean": 2.0506010339,
+      "low_95": 1.5491621399,
+      "high_95": 2.6408426635,
+      "positive_families": "15/15"
+    }
+  },
+  "generated_prefix_advantage": {
+    "budgets": [1, 3, 5, 10, 20],
+    "versus_no_msa": [0.7082237785, 2.1055307515, 3.8160225560, 7.4793503558, 14.6097993838],
+    "versus_shuffled_msa": [0.8360004429, 2.3243955745, 3.8941637354, 7.7084458223, 15.2814448206],
+    "versus_evoflows_reproduction": [0.4704596061, 1.3119328038, 2.0726715143, 4.2648337974, 8.2497287924]
+  },
+  "compounding_slope_vs_no_msa": {
+    "mean": 0.1683886777,
+    "low_95": 0.1215704103,
+    "high_95": 0.2229387194,
+    "positive_families": "15/15"
+  },
+  "limitations": [
+    "The EvoFlows comparator is an independent paper-contract reproduction.",
+    "Reconstructed endpoints are not definitive historical indel paths.",
+    "Exact inserted-residue recovery remains weak."
+  ]
+}
+

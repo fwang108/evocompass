@@ -1,0 +1,43 @@
+{
+  "model": "EvoCompass",
+  "endpoint": "control trajectory NLL minus true-correspondence trajectory NLL at budget 10",
+  "controls": {
+    "within_family_shuffled": {
+      "mean": 5.9190224117,
+      "low_95": 4.9953198185,
+      "high_95": 6.9435544809
+    },
+    "unrelated_family": {
+      "mean": 5.843,
+      "interpretation": "generic family information without source correspondence"
+    },
+    "profile_matched_random": {
+      "mean": 4.605,
+      "interpretation": "matched marginal statistics without biological correspondence"
+    },
+    "no_msa": {
+      "mean": 2.5058326832,
+      "low_95": 1.9129449704,
+      "high_95": 3.2000042018
+    },
+    "same_family_wrong_branch": {
+      "mean": 0.2206290362,
+      "low_95": 0.1399114792,
+      "high_95": 0.3056829852
+    }
+  },
+  "dose_response": {
+    "doses": [0.0, 0.25, 0.5, 0.75, 1.0],
+    "budget_10_nll": [74.5167177984, 71.8175782600, 69.9488457321, 68.9391107258, 68.6960423901],
+    "monotonic": true,
+    "zero_to_full": {
+      "mean": 4.4430809120,
+      "low_95": 3.7883869089,
+      "high_95": 5.1869601710,
+      "positive_families": "15/15"
+    }
+  },
+  "claim": "Controlled evidence that homolog-specific correspondence contributes predictive information beyond additional profile features.",
+  "claim_boundary": "The interventions are not definitive causal proof."
+}
+
