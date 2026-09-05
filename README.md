@@ -1,6 +1,6 @@
 # EvoCompass
 
-**Correspondence-Guided Edit Flows for Directional Protein Evolution**
+**Homolog-conditioned probabilistic protein editing**
 
 EvoCompass is an event-driven protein sequence model conditioned on homolog-specific
 evolutionary correspondence. At each position it combines the current residue, a
@@ -11,7 +11,8 @@ evolutionary correspondence. At each position it combines the current residue, a
 3. the destination residue for substitutions and insertions.
 
 Calibrated event probabilities are converted to continuous-time hazards and used to
-sample variable-length editing trajectories.
+sample variable-length editing trajectories. The compact heads are trained with
+supervised event and residue losses, not a flow-matching objective.
 
 ## Why evolutionary correspondence?
 
@@ -20,11 +21,13 @@ direction. EvoCompass makes the homolog-specific amino-acid distribution an expl
 conditioning variable instead of asking an intermediate sequence state to implicitly
 encode an unseen endpoint.
 
-Controlled evaluations show that the benefit depends on correspondence, rather than
-merely receiving more profile-like features. Destroying positional correspondence,
-using an unrelated family, or replacing the profile with matched random information
-degrades trajectory likelihood. Progressively restoring correspondence produces a
-monotonic improvement.
+Controlled input perturbations show dependence on aligned homolog information.
+The original prefix score evaluates requested edits from a fixed source state;
+it is not a sequential trajectory likelihood. Family-wide profile shuffling also
+changes branch provenance and can import leaves excluded for the recipient, so
+it does not isolate position alone. The dose experiment interpolates each profile
+vector between shuffled and true profiles rather than restoring a fraction of
+correctly paired columns.
 
 ## Model
 
@@ -122,18 +125,22 @@ evocompass-sample artifacts/checkpoints/evocompass.pt request.json --seed 7
 
 ## Main results
 
-The compact aggregate reports in `artifacts/reports` record the frozen evaluation:
+The compact aggregate reports in `artifacts/reports` preserve the original frozen
+evaluation, not the complete current manuscript analysis:
 
 - 15 held-out protein families;
 - 1,557 reconstructed evolutionary branches;
 - positive correspondence effects in all held-out families;
 - a monotonic 0%, 25%, 50%, 75%, 100% correspondence dose response;
-- increasing advantage over multi-step trajectories;
+- increasing cumulative fixed-source prefix-score differences across edit budgets;
 - improved homolog-supported editing and forward-direction likelihood.
 
-The included EvoFlows comparator is an independent paper-contract reproduction. No
-official implementation or checkpoint was publicly available, so it must not be
-interpreted as evaluation of the authors' released model.
+The checkpoint historically named `evoflows_reproduction` is a supervised
+baseline, not an EvoFlows reproduction: it uses source identity, position,
+branch length, time, and zero padding with the same supervised head recipe.
+Archived filenames and report labels are retained for provenance, but their
+reproduction label is superseded by this correction. These artifacts do not
+provide an empirical comparison with EvoFlows' flow-matching method.
 
 ## Limitations
 
@@ -142,8 +149,16 @@ interpreted as evaluation of the authors' released model.
 - The small reference heads do not model long-range sequence context or epistasis.
 - Evolutionary plausibility is not equivalent to an engineering objective such as
   thermostability.
-- The benchmark supports directional trajectory modeling, not reconstruction of the
-  unique historical trajectory.
+- Edit likelihood does not establish historical trajectories or improved function.
+
+## Code and data availability
+
+This repository provides the compact reference implementation, compact checkpoints,
+and original aggregate reports. The complete manuscript reproduction package,
+including benchmark inputs, alignment/tree caches, contextual feature caches, and
+revision-specific analysis scripts, is not yet publicly released. The released
+artifacts alone are therefore insufficient to reproduce every manuscript result;
+the original reports should not be interpreted as the corrected manuscript analyses.
 
 ## Relationship to DiscoverydLLM
 
