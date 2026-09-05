@@ -156,8 +156,8 @@ provide an empirical comparison with EvoFlows' flow-matching method.
 This repository provides the compact reference implementation, compact checkpoints,
 and original aggregate reports. The complete manuscript reproduction package,
 including benchmark inputs, alignment/tree caches, contextual feature caches, and
-revision-specific analysis scripts, is not yet publicly released. The released
-artifacts alone are therefore insufficient to reproduce every manuscript result;
+revision-specific analysis scripts, can be requested from the corresponding author
+(mbuehler@mit.edu). The released artifacts alone are therefore insufficient to reproduce every manuscript result;
 the original reports should not be interpreted as the corrected manuscript analyses.
 
 ## Relationship to DiscoverydLLM
